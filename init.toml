@@ -1,0 +1,79 @@
+#=============================================================================
+# basic.toml --- basic configuration example for SpaceVim
+# Copyright (c) 2016-2021 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "palenight"
+    colorscheme_bg = "dark"
+    # true colors
+    enable_guicolors = true 
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "nil"
+    statusline_iseparator = "bar"
+    buffer_index_type = 4
+    windows_index_type = 3
+    enable_tabline_filetype_icon = false
+    enable_statusline_mode = 1
+    statusline_unicode = false
+    # Enable vim compatible mode, avoid changing origin vim key bindings
+    vimcompatible = true
+    #nerdTree settings 
+    filetree_direction = "left"
+    # set lint-engine
+    lint_engine	= 'neomake'
+    lint_on_the_fly = true
+    show_cursor_error = true
+    # autocomplete engine thing
+     autocomplete_method = "coc"
+
+[[layers]]
+  name = 'autocomplete'
+  auto_completion_return_key_behavior = "complete"
+  auto_completion_tab_key_behavior = "cycle"
+  auto_completion_return_key_behavior = "smart"
+#used to be dashes idk why pero check
+
+[[layers]]
+  name = 'shell'
+  default_position = 'bottom' #supposed to be top
+  default_height = 30
+
+[[layers]] #enable js stuff
+  name = "lang#javascript"
+  format_on_save = true
+  enable_flow_syntax = true
+
+[[layers]]
+  name = "lang#typescript"
+
+[[layers]] #enables auto syntax checking
+  name = "checkers"
+  
+
+#enable git integration
+[[layers]]
+    name = 'git'
+[[layers]]
+    name = 'VersionControl'
+
+[[layers]]
+  name = "lsp"
+
+
+#for pretty colors bb
+ [[layers]]
+  name = "colorscheme"
+
+
+
+[[custom_plugins]]
+  repo = 'https://github.com/vimwiki/vimwiki'
+  
